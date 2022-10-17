@@ -1,0 +1,98 @@
+:root {
+    font-size: 20px;
+
+    --colorFont: #c7d5e0;
+    --colorBackground: linear-gradient(to right, #1b2838, #2a475e);
+    --colorBackground2: linear-gradient(to right, #1b2838, #2a475e);
+    --colorInput: rgba(255, 255, 255, .2);
+    --colorInputHover: rgba(255, 255, 255, .1);
+    --colorButton: #4f9cc9;
+    --colorButtonHover: #76b9e2;
+
+    --colorIcons: #2a475e;
+
+    --border: 2px solid rgba(255, 255, 255, .3);
+    --borderRadius: 5px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+    background: var(--colorBackground);
+}
+
+* {
+    font-family: sans-serif;
+    color: var(--colorFont);
+}
+
+header {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+
+input {
+    width: 300px;
+    height: 30px;
+
+    font-size: .8rem;
+    text-align: left;
+    padding: 5px;
+    border: none;
+    border-radius: var(--borderRadius);
+    background-color: #1b2838;
+}
+input:hover {
+    background-color: var(--colorInputHover);
+}
+input:focus {
+    outline: var(--border);
+}
+
+button {
+    width: 100px;
+    height: 40px;
+
+    margin-top: 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--borderRadius); 
+    background-color: var(--colorButton);
+}
+button:hover {
+    background-color: var(--colorButtonHover);
+}
+button:active {
+    background-color: var(--colorButtonActive);
+}
+
+label {
+    padding: 10px 0;
+}
+

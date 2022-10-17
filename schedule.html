@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Axel Asp">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Schedule</title>
+</head>
+<body>
+
+    <div class="masthead">
+        <div class="start">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h1>Schedule</h1>
+        </div>
+        <div class="center"></div>
+        <div class="end"></div>
+    </div>
+
+    <main>
+        <div class="sidepanel left hide">
+            <div class="start">
+                <button class="button-close" id="button-close-panel"><i class="fa-solid fa-xmark"></i></button>
+                
+                <h1 id="job-name">Info</h1>
+                <p id="date"></p>
+                <p id="time"></p>
+                <p id="break"></p>
+
+                <h2>Income Earned</h2>
+                <p id="net"></p>
+                <p id="gross"></p>
+
+                <h2>Salary</h2>
+                <p id="hourly-rate"></p>
+            </div>
+            <div class="center"></div>
+            <div class="end">
+                <button id="button-delete"><i class="fa-solid fa-trash"></i></button>
+            </div>     
+        </div>
+
+        <div class="content-container">
+            <header>
+                <div class="month-wrapper">
+                    <div class="start">
+                        <button id="button-month-previous"><i class="fa-solid fa-chevron-left"></i></button>
+                    </div>
+                    <div class="center">
+                        <h2 id="date-display">January 2022</h2>
+                    </div>
+                    <div class="end">
+                        <button id="button-month-next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="days-wrapper">
+                    <h4 class="days">Monday</h4>
+                    <h4 class="days">Tuesday</h4>
+                    <h4 class="days">Wednesday</h4>
+                    <h4 class="days">Thursday</h4>
+                    <h4 class="days">Friday</h4>
+                    <h4 class="days">Saturday</h4>
+                    <h4 class="days">Sunday</h4>
+                </div>
+            </header>
+
+            <div class="content"> 
+                <div class="sidebar"> 
+                    <label class="weeks" id="week1">1</label>
+                    <label class="weeks" id="week2">2</label>
+                    <label class="weeks" id="week3">3</label>
+                    <label class="weeks" id="week4">4</label>
+                    <label class="weeks" id="week5">5</label>
+                    <label class="weeks" id="week6">6</label>
+                </div>
+
+                <ul class="shift-list"></ul>    
+            </div>
+        </div>
+
+        <div class="sidepanel right">
+            <div class="start">
+                <h1>This Month</h1>
+                <p id="total-net">Total Net Earned: </p>
+                <p id="total-gross">Total Gross Earned: </p>
+                <p id="total-time">Total Time: </p>
+            </div>
+            <div class="center">
+                <h2>My Jobs</h2>
+                <ul class="job-list"></ul>
+            </div>
+            <div class="end"></div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="start"></div>
+        <div class="center">
+            <button id="button-add-shift"><i class="fa-solid fa-calendar-plus"></i></button>
+        </div>
+        <div class="end">
+            <button id="button-create-job"><i class="fa-solid fa-right-long"></i> <i class="fa-solid fa-folder-plus"></i></button>
+        </div>
+    </footer>
+
+
+    <div class="popup-container closed">
+        <button class="button-close" id="button-close-popup"><i class="fa-solid fa-xmark"></i></button>
+        <form>
+            <h1>New Shift</h1>
+
+            <label for="job-select">Select a Job</label>
+            <select class="job-select" id="job-select"></select>
+
+            <label for="input-date">Date</label>
+            <input type="date" id="input-date" required>
+            
+            <label for="input-time-from">From</label>
+            <input type="time" id="input-time-from" required>
+            <label for="input-time-to">To</label>
+            <input type="time" id="input-time-to" required>
+
+            <label for="input-break">Break</label>
+            <input type="number" id="input-break" value="0" min="0" max="4" value="1" required>
+            
+            <button type="submit" id="button-submit-shift"><i class="fa-solid fa-calendar-plus"></i></button>
+        </form>
+    </div>
+
+    <script src="src/schedule.js" type="module"></script>
+    
+</body>
+</html>
