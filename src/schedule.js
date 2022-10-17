@@ -14,9 +14,6 @@ for (let i = 0; i < 31; i++) {
 }
 let jobs = [];
 
-let test1 = 0;
-let test2 = 1;
-
 let selectedButton = null;
 let selectedIndex1 = null;
 let selectedIndex2 = null;
