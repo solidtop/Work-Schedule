@@ -338,7 +338,7 @@ i {
     border-radius: var(--borderRadius);
     background: var(--colorBackround2);
 
-    transition: all .1s ease-out;
+    transition: all .2s ease-out;
 }
 .closed {
     opacity: 0;
